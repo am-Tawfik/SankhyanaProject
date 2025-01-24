@@ -89,18 +89,15 @@ def main():
             inputs[3] = (inputs[3] - 143.5) / (2501 - 143.5)
             inputs[4] = (inputs[4] - 0.05263) / (0.1634 - 0.05263)
 
+            # Diagnosis
+            diagnosis = ''
+
             if st.button('Predict'):
                 diagnosis = BreastCancerPredict(inputs)
                 st.success(diagnosis)
     except Exception as e:
         st.error(f"Error: {e}")
     
-    # Diagnosis
-    diagnosis = ''
-    
-    if st.button('Predict'):
-        diagnosis = BreastCancerPredict(inputs)
-        st.success(diagnosis)
             
 if __name__ =='__main__':
     main()
