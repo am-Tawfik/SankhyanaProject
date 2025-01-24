@@ -7,9 +7,6 @@ This is a temporary script file.
 
 
 
-import os
-os.getcwd()
-
 # Importing pandas and numpy to deal with data
 import pandas as pd
 import numpy as np
