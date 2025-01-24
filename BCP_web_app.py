@@ -90,7 +90,7 @@ def main():
     
     if st.button('Predict'):
         diagnosis = BreastCancerPredict(new_observation)
-    st.success(diagnosis)
+        st.success(diagnosis)
 
 if __name__ =='__main__':
     main()
