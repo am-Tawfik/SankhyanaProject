@@ -13,7 +13,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import requests
-from sklearn.linear_model import LogisticRegression
+# from sklearn.linear_model import LogisticRegression
 
 # load the .sav model from github
 url = 'https://github.com/am-Tawfik/SankhyanaProject/blob/main/trained_logistic_model.sav'
@@ -22,11 +22,11 @@ url = 'https://github.com/am-Tawfik/SankhyanaProject/blob/main/trained_logistic_
 model = requests.get(url)
 
 # save the downloaded model to a temporary file
-with open("trained_logistic_model", "wb") as f:
+with open("trained_logistic_model.sav", "wb") as f:
     pickle.dump(model, f)
 
 # laod the saved model
-with open("trained_logistic_model", "rb") as f:
+with open("trained_logistic_model.sav", "rb") as f:
     model = pickle.load(f)
     
     
