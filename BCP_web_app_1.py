@@ -13,7 +13,6 @@ import numpy as np
 import pickle
 import streamlit as st
 import requests
-# from sklearn.linear_model import LogisticRegression
 
 # load the .sav model from github
 url = 'https://github.com/am-Tawfik/SankhyanaProject/blob/main/trained_logistic_model.sav'
@@ -31,7 +30,7 @@ with open("trained_logistic_model.sav", "rb") as f:
     
     
     
-def BreastCancerPredict (new_data):
+def BreastCancerPredict(new_data):
     
     # creating an array
     new_data_array = np.array(new_data)
@@ -94,7 +93,7 @@ def main():
 
             if st.button('Predict'):
                 diagnosis = BreastCancerPredict(inputs)
-                st.success(diagnosis)
+            st.success(diagnosis)
     except Exception as e:
         st.error(f"Error: {e}")
     
@@ -102,10 +101,4 @@ def main():
 if __name__ =='__main__':
     main()
     
-    
-    
-    
-    
-    
-    
-    
+        
